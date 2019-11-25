@@ -1,5 +1,5 @@
 <template>
-  <div :style="{ height: statusBarHeight }" class="uni-status-bar">
+  <div class="uni-status-bar">
     <slot/>
   </div>
 </template>
@@ -11,11 +11,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
   .uni-status-bar {
     display: block;
     width: 100%;
     height: 20px;
-    /*height: var(--status-bar-height);*/
+    height: var(--status-bar, 44px);
   }
 </style>

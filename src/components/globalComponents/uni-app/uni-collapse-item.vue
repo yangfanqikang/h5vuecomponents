@@ -233,7 +233,7 @@ export default {
   }
 
   .uni-collapse-cell__content div p{
-    font-size: 14px;
+    font-size: 14px!important;
   }
 
   /*.selectedStyle1 {*/

@@ -7,7 +7,7 @@
       <div :style="{color:color}" class="uni-navbar__header uni-navbar__content_div">
         <div class="uni-navbar__header-btns uni-navbar__content_div" @click="onClickLeft">
           <div v-if="leftIcon.length" class="uni-navbar__content_div">
-            <uni-icons :type="leftIcon" :color="color" size="24"/>
+            <uni-icons :type="leftIcon" :color="color" size="48"/>
           </div>
           <div v-if="leftText.length" :class="{'uni-navbar-btn-icon-left':!leftIcon.length}"
                class="uni-navbar-btn-text uni-navbar__content_div">{{ leftText }}
@@ -22,7 +22,7 @@
         <div :class="title.length?'uni-navbar__header-btns-right':''"
              class="uni-navbar__header-btns uni-navbar__content_div" @click="onClickRight">
           <div v-if="rightIcon.length" class="uni-navbar__content_div">
-            <uni-icons :type="rightIcon" :color="color" size="24"/>
+            <uni-icons :type="rightIcon" :color="color" size="48"/>
           </div>
           <!-- 优先显示图标 -->
           <div v-if="rightText.length&&!rightIcon.length" class="uni-navbar-btn-text uni-navbar__content_div">{{
@@ -110,6 +110,8 @@ export default {
   }
 
   .uni-navbar__content {
+    box-sizing: border-box;
+    padding: 0 15px;
     display: block;
     position: relative;
     width: 100%;
@@ -144,11 +146,11 @@ export default {
   }
 
   .uni-navbar__header-btns:last-child {
-    width: 30px
+    width: 15px
   }
 
   .uni-navbar__header-btns-right:last-child {
-    width: 60px;
+    width: 30px;
     text-align: right;
     flex-direction: row-reverse
   }
