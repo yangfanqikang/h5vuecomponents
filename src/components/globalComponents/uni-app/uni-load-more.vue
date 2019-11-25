@@ -78,21 +78,21 @@ export default {
   .uni-load-more {
     display: flex;
     flex-direction: row;
-    height: 80px;
+    height: 40px;
     align-items: center;
     justify-content: center
   }
 
   .uni-load-more__text {
-    font-size: 28px;
+    font-size: 14px;
     color: #999
   }
 
   .uni-load-more__img {
     position: relative;
-    height: 24px;
-    width: 24px;
-    margin-right: 10px
+    height: 12px;
+    width: 12px;
+    margin-right: 5px
   }
 
   .uni-load-more__img > .load {
@@ -100,8 +100,8 @@ export default {
   }
 
   .uni-load-more__img > .load .uni-load-div_wrapper {
-    width: 6px;
-    height: 2px;
+    width: 3px;
+    height: 1px;
     border-top-left-radius: 1px;
     border-bottom-left-radius: 1px;
     background: #999;
@@ -113,24 +113,24 @@ export default {
 
   .uni-load-more__img > .load .uni-load-div_wrapper:nth-child(1) {
     transform: rotate(90deg);
-    top: 2px;
-    left: 9px
+    top: 1px;
+    left: 4px
   }
 
   .uni-load-more__img > .load .uni-load-div_wrapper:nth-child(2) {
     transform: rotate(180deg);
-    top: 11px;
+    top: 5px;
     right: 0
   }
 
   .uni-load-more__img > .load .uni-load-div_wrapper:nth-child(3) {
     transform: rotate(270deg);
-    bottom: 2px;
-    left: 9px
+    bottom: 1px;
+    left: 4px
   }
 
   .uni-load-more__img > .load .uni-load-div_wrapper:nth-child(4) {
-    top: 11px;
+    top: 5px;
     left: 0
   }
 
@@ -141,7 +141,7 @@ export default {
     right: 0;
     bottom: 0;
     box-sizing: border-box;
-    border: solid 2px #777;
+    border: solid 1px #777;
     border-radius: 50%;
     border-bottom-color: transparent !important;
     animation: loader-android 1s 0s linear infinite
@@ -150,8 +150,8 @@ export default {
   .load1,
   .load2,
   .load3 {
-    height: 24px;
-    width: 24px
+    height: 12px;
+    width: 12px
   }
 
   .load2 {

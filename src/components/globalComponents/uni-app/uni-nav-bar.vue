@@ -104,7 +104,7 @@ export default {
   @charset "UTF-8";
   .uni-navbar {
     width: 100%;
-    height: 88px;
+    height: 44px;
     display: flex;
     align-items: center;
   }
@@ -126,17 +126,17 @@ export default {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 88px;
-    line-height: 88px;
-    font-size: 16px
+    height: 44px;
+    line-height: 44px;
+    font-size: 8px
   }
 
   .uni-navbar__header-btns {
     display: inline-flex;
     flex-wrap: nowrap;
     flex-shrink: 0;
-    width: 120px;
-    padding: 0 12px
+    /*width: 60px;*/
+    padding: 0 6px
   }
 
   .uni-navbar__header-btns:first-child {
@@ -144,29 +144,29 @@ export default {
   }
 
   .uni-navbar__header-btns:last-child {
-    width: 60px
+    width: 30px
   }
 
   .uni-navbar__header-btns-right:last-child {
-    width: 120 rpx;
+    width: 60px;
     text-align: right;
     flex-direction: row-reverse
   }
 
   .uni-navbar__header-container {
     width: 100%;
-    margin: 0 10px
+    margin: 0 5px
   }
 
   .uni-navbar__header-container-inner {
     width: 100%;
     display: flex;
     justify-content: center;
-    font-size: 30px
+    font-size: 15px
   }
 
   .uni-navbar__placeholder-div {
-    height: 44px
+    height: 22px
   }
 
   .uni-navbar--fixed {
@@ -175,7 +175,7 @@ export default {
   }
 
   .uni-navbar--shadow {
-    box-shadow: 0 1px 6px #ccc
+    box-shadow: 0 1px 3px #ccc
   }
 
   .uni-navbar--border:after {

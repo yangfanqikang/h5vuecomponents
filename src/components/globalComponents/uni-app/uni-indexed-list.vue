@@ -180,7 +180,7 @@ export default {
   }
 
   .uni-list-item {
-    font-size: 32px;
+    font-size: 16px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -189,7 +189,7 @@ export default {
   }
 
   .uni-list-item__container {
-    padding: 24px 30px;
+    padding: 12px 15px;
     width: 100%;
     box-sizing: border-box;
     flex: 1;
@@ -205,7 +205,7 @@ export default {
     z-index: 3;
     right: 0;
     bottom: 0;
-    left: 30px;
+    left: 15px;
     height: 1px;
     content: '';
     -webkit-transform: scaleY(.5);
@@ -224,16 +224,16 @@ export default {
   }
 
   .uni-indexed__list-title {
-    padding: 10px 24px;
+    padding: 5px 12px;
     line-height: 1.5;
     background-color: #f7f7f7;
-    font-size: 24px
+    font-size: 12px
   }
 
   .uni-indexed__menu {
     position: fixed;
     right: 0;
-    width: 46px;
+    width: 23px;
     height: 100vh;
     background-color: #d3d3d3;
     display: flex;
@@ -254,7 +254,7 @@ export default {
 
   .uni-indexed__menu-item {
     color: #aaa;
-    font-size: 22px;
+    font-size: 11px;
     text-align: center
   }
 
@@ -264,15 +264,15 @@ export default {
     align-items: center;
     justify-content: center;
     z-index: 20;
-    width: 160px;
-    height: 160px;
+    width: 80px;
+    height: 80px;
     left: 50%;
     top: 50%;
-    margin-left: -80px;
-    margin-top: -80px;
-    border-radius: 80px;
+    margin-left: -40px;
+    margin-top: -40px;
+    border-radius: 40px;
     text-align: center;
-    font-size: 70px;
+    font-size: 35px;
     color: #fff;
     background-color: rgba(0, 0, 0, .5)
   }

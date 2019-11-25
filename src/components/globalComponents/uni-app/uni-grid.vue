@@ -68,6 +68,7 @@ export default {
       this.$emit('change', e)
     },
     _getSize () {
+      return parseInt(690 / this.column - 1)
     }
   }
 }

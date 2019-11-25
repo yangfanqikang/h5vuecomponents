@@ -1,22 +1,24 @@
 <template>
-  <div>
+  <page :title="this.$route.query.name">
     <div class="uni-padding-wrap">
-      <button class="btn" type="primary" @click="switchBtn(0)">切换菜单({{ directionStr }}显示)</button>
-      <button class="btn" type="primary" @click="switchBtn('left', 'bottom')">左下角显示</button>
-      <button class="btn" type="primary" @click="switchBtn('right', 'bottom')">右下角显示</button>
-      <button class="btn" type="primary" @click="switchBtn('left', 'top')">左上角显示</button>
-      <button class="btn" type="primary" @click="switchBtn('right', 'top')">右上角显示</button>
+      <van-button class="btn" type="primary" @click="switchBtn(0)">切换菜单({{ directionStr }}显示)</van-button>
+      <van-button class="btn" type="primary" @click="switchBtn('left', 'bottom')">左下角显示</van-button>
+      <van-button class="btn" type="primary" @click="switchBtn('right', 'bottom')">右下角显示</van-button>
+      <van-button class="btn" type="primary" @click="switchBtn('left', 'top')">左上角显示</van-button>
+      <van-button class="btn" type="primary" @click="switchBtn('right', 'top')">右上角显示</van-button>
     </div>
     <uni-fab ref="fab" :pattern="pattern" :content="content" :horizontal="horizontal" :vertical="vertical"
              :direction="direction" @trigger="trigger"/>
-  </div>
+  </page>
 </template>
 
 <script>
 import uniFab from '@/components/globalComponents/uni-app/uni-fab.vue'
+import Page from '../../../components/globalComponents/page'
 
 export default {
   components: {
+    Page,
     uniFab
   },
   data () {
@@ -99,22 +101,22 @@ export default {
   }
 
   div {
-    font-size: 28px;
+    font-size: 14px;
     line-height: inherit
   }
 
   .example {
-    padding: 0 30px 30px
+    padding: 0 15px 15px
   }
 
   .example-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 32px;
+    font-size: 16px;
     color: #464e52;
-    padding: 30px 30px 30px 50px;
-    margin-top: 20px;
+    padding: 15px 15px 15px 25px;
+    margin-top: 10px;
     position: relative;
     background-color: #fdfdfd;
     border-bottom: 1px #f5f5f5 solid
@@ -128,35 +130,35 @@ export default {
   .example-title:after {
     content: '';
     position: absolute;
-    left: 30px;
+    left: 15px;
     margin: auto;
     top: 0;
     bottom: 0;
-    width: 6px;
-    height: 32px;
+    width: 3px;
+    height: 16px;
     background-color: #ccc
   }
 
   .example .example-title {
-    margin: 40px 0
+    margin: 20px 0
   }
 
   .example-body {
-    padding: 30px;
+    padding: 15px;
     background: #fff
   }
 
   .example-info {
-    padding: 30px;
+    padding: 15px;
     color: #3b4144;
     background: #fff
   }
 
   .uni-padding-wrap {
-    padding-top: 200px;
+    padding-top: 100px;
   }
 
   .btn {
-    margin: 30px;
+    margin: 15px;
   }
 </style>

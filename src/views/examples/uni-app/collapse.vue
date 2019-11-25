@@ -250,7 +250,7 @@ export default {
   }
   p.content1{
     padding: 15px;
-    font-size: 10px!important;
+    font-size: 14px!important;
     line-height: 20px;
     background-color: #f9f9f9;
     color: #666;

@@ -17,7 +17,7 @@
       <div v-if="showBadge || showArrow || showSwitch" class="uni-list-item__extra">
         <uni-badge v-if="showBadge" :type="badgeType" :text="badgeText"/>
         <uni-switch v-if="showSwitch" :disabled="disabled" :checked="switchChecked" @change="onSwitchChange"/>
-        <uni-icons v-if="showArrow" :size="20" color="#bbb" type="arrowright"/>
+        <uni-icons v-if="showArrow" :size="40" color="#bbb" type="arrowright"/>
       </div>
     </div>
   </div>

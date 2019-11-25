@@ -117,9 +117,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
   @charset "UTF-8";
-
+  :root{
+    --width-style: 0
+  }
   .uni-grid-item {
     box-sizing: border-box
   }
@@ -136,20 +138,20 @@ export default {
     align-items: center;
     width: 100%;
     height: 100%;
-    font-size: 32px;
+    font-size: 16px;
     color: #666;
-    padding: 20px 0;
+    padding: 10px 0;
     box-sizing: border-box
   }
 
   .uni-grid-item__box-item .image {
-    width: 50px;
-    height: 50px
+    width: 25px;
+    height: 25px
   }
 
   .uni-grid-item__box-item .text {
-    font-size: 26px;
-    margin-top: 10px
+    font-size: 13px;
+    margin-top: 5px
   }
 
   .uni-grid-item__box.uni-grid-item__box-square {
@@ -190,8 +192,8 @@ export default {
   }
 
   .uni-grid-item__box-dot {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background: #ff5a5f;
     border-radius: 50%
   }
@@ -208,13 +210,13 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     overflow: hidden
   }
 
   .uni-grid-item__box-image .box-image {
-    width: 90px
+    width: 45px
   }
 
   div.widthStyle {

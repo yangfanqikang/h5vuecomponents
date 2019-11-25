@@ -1,5 +1,7 @@
 <template>
-  <uni-indexed-list :options="list" :show-select="false" @click="bindClick"/>
+  <page>
+    <uni-indexed-list :options="list" :show-select="false" @click="bindClick"/>
+  </page>
 </template>
 
 <script>
@@ -31,23 +33,23 @@ export default {
     background-color: #efeff4
   }
 
-  view {
-    font-size: 28px;
+  div {
+    font-size: 14px;
     line-height: inherit
   }
 
   .example {
-    padding: 0 30px 30px
+    padding: 0 15px 15px
   }
 
   .example-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 32px;
+    font-size: 16px;
     color: #464e52;
-    padding: 30px 30px 30px 50px;
-    margin-top: 20px;
+    padding: 15px 15px 15px 25px;
+    margin-top: 10px;
     position: relative;
     background-color: #fdfdfd;
     border-bottom: 1px #f5f5f5 solid
@@ -61,26 +63,26 @@ export default {
   .example-title:after {
     content: '';
     position: absolute;
-    left: 30px;
+    left: 15px;
     margin: auto;
     top: 0;
     bottom: 0;
-    width: 6px;
-    height: 32px;
+    width: 3px;
+    height: 16px;
     background-color: #ccc
   }
 
   .example .example-title {
-    margin: 40px 0
+    margin: 20px 0
   }
 
   .example-body {
-    padding: 30px;
+    padding: 15px;
     background: #fff
   }
 
   .example-info {
-    padding: 30px;
+    padding: 15px;
     color: #3b4144;
     background: #fff
   }

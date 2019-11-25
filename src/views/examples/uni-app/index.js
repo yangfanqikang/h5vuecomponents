@@ -9,7 +9,7 @@ pagesContext.keys().forEach(page => {
     component: {}
   }
   // 如果是根目录的 index.js 、不处理
-  if (page.startsWith('./index')) {
+  if (page.startsWith('./index.js')) {
     return
   }
   // 路径

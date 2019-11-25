@@ -1,11 +1,10 @@
 <template>
-  <div class="page-index">
-    <status-bar></status-bar>
-    <div class="page-navbar">
-      <div><i class="iconfont iconsortlight"></i></div>
-      <h4>18³</h4>
-      <div><i class="iconfont iconsearch"></i></div>
-    </div>
+  <page class="page-index" title="18³">
+<!--    <div class="page-navbar">-->
+<!--      <div><i class="iconfont iconsortlight"></i></div>-->
+<!--      <h4>18³</h4>-->
+<!--      <div><i class="iconfont iconsearch"></i></div>-->
+<!--    </div>-->
     <div class="page-img">
       <img src="../../assets/img/uni-app_nut_mand_cube_vant.png" alt="">
     </div>
@@ -34,7 +33,7 @@
         <div v-show="currentIndex === 4"></div>
       </div>
     </div>
-  </div>
+  </page>
 </template>
 
 <script>
@@ -97,7 +96,7 @@ export default {
       },
       {
         name: 'List 列表',
-        url: 'list'
+        url: 'uni-list'
       },
       {
         name: 'LoadMore 加载更多',
@@ -183,6 +182,9 @@ export default {
       width: 100%;
       display: flex;
       justify-content: center;
+      >img{
+        width: 100%;
+      }
     }
 
     .page-container {

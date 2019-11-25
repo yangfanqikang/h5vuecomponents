@@ -8,7 +8,7 @@ import SvgIcon from 'components/SvgIcon'
 import '@/icons' // icon
 import '@/style/common.scss'
 import '@/assets/font/font1/iconfont.css'
-import { Lazyload, NavBar, Icon } from 'vant'
+import { Lazyload, NavBar, Icon, Button, RadioGroup, Radio, Cell, CellGroup } from 'vant'
 import defaultSettings from '@/settings'
 // import GlobalComponents from './components/index'
 import './components/index'
@@ -26,7 +26,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // options 为可选参数，无则不传
-Vue.use(Lazyload).use(NavBar).use(Icon)
+Vue.use(Lazyload).use(NavBar).use(Icon).use(Button).use(RadioGroup).use(Radio).use(Cell).use(CellGroup)
 // Vue.use(GlobalComponents)
 Vue.component('svg-icon', SvgIcon)
 if (process.env.NODE_ENV === 'development' && defaultSettings.vconsole) {

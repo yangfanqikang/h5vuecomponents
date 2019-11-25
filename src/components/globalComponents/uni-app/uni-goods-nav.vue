@@ -93,7 +93,7 @@ export default {
 
   .uni-tab__cart-box {
     width: 100%;
-    height: 100px;
+    height: 50px;
     background: #fff;
     z-index: 900;
   }
@@ -104,7 +104,7 @@ export default {
   }
 
   .uni-tab__right {
-    margin: 5px 0;
+    margin: 2px 0;
     margin-right: 10px;
     border-radius: 100px;
     overflow: hidden;
@@ -116,12 +116,12 @@ export default {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    font-size: 24px;
+    font-size: 12px;
   }
 
   .uni-tab__icon {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
   }
 
   .uni-tab__icon img {
@@ -130,8 +130,8 @@ export default {
   }
 
   .uni-tab__cart-button-left .uni-tab__text {
-    margin-top: 5px;
-    font-size: 24px;
+    margin-top: 2px;
+    font-size: 12px;
     color: #666;
   }
 
@@ -139,7 +139,7 @@ export default {
     justify-content: center;
     align-items: center;
     width: 100%;
-    font-size: 24px;
+    font-size: 12px;
     color: #fff;
   }
 
@@ -149,8 +149,8 @@ export default {
 
   .uni-tab__cart-button-left .uni-tab__dot-box {
     position: absolute;
-    right: 40px;
-    top: 20px;
+    right: 20px;
+    top: 10px;
     justify-content: center;
     align-items: center;
     width: 0;
@@ -159,20 +159,20 @@ export default {
 
   .uni-tab__dot-box .uni-tab__dot {
     flex-shrink: 0;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
     color: #ffffff;
     text-align: center;
-    font-size: 12px;
+    font-size: 6px;
     background: #ff0000;
     border-radius: 50%;
   }
 
   .uni-tab__dot-box .uni-tab__dot.uni-tab__dots {
-    padding: 0 8px;
+    padding: 0 4px;
     width: auto;
-    border-radius: 30px;
+    border-radius: 15px;
   }
 
   .uni-tab__color-y {

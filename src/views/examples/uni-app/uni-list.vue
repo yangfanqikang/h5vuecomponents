@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <page :title="this.$route.query.name">
     <div class="example-info">列表组件可以在其中使用图标、略缩图或放置任何你想放的元素，使用场景如：导航菜单、列表、设置中心排版等</div>
     <div class="example-title">基础列表</div>
     <uni-list>
@@ -17,17 +17,11 @@
       <uni-list-item :disabled="true" :show-extra-icon="true" :extra-icon="extraIcon2" :show-switch="true" :switch-checked="true" title="禁用状态" @switchChange="switchChange" />
     </uni-list>
 
-  </div>
+  </page>
 </template>
 
 <script>
-import uniList from '@/components/globalComponents/uni-app/uni-list'
-import uniListItem from '@/components/globalComponents/uni-app/uni-list-item'
 export default {
-  components: {
-    uniList,
-    uniListItem
-  },
   data () {
     return {
       extraIcon1: {
@@ -57,22 +51,22 @@ export default {
   }
 
   div {
-    font-size: 28px;
+    font-size: 14px;
     line-height: inherit
   }
 
   .example {
-    padding: 0 30px 30px
+    padding: 0 15px 15px
   }
 
   .example-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 32px;
+    font-size: 16px;
     color: #464e52;
-    padding: 30px 30px 30px 50px;
-    margin-top: 20px;
+    padding: 15px 15px 15px 25px;
+    margin-top: 10px;
     position: relative;
     background-color: #fdfdfd;
     border-bottom: 1px #f5f5f5 solid
@@ -86,26 +80,26 @@ export default {
   .example-title:after {
     content: '';
     position: absolute;
-    left: 30px;
+    left: 15px;
     margin: auto;
     top: 0;
     bottom: 0;
-    width: 6px;
-    height: 32px;
+    width: 3px;
+    height: 16px;
     background-color: #ccc
   }
 
   .example .example-title {
-    margin: 40px 0
+    margin: 20px 0
   }
 
   .example-body {
-    padding: 30px;
+    padding: 15px;
     background: #fff
   }
 
   .example-info {
-    padding: 30px;
+    padding: 15px;
     color: #3b4144;
     background: #fff
   }

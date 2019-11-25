@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <page :title="this.$route.query.name">
     <div class="example-title">基本用法</div>
     <div class="example-body">
       <uni-fav :checked="checkList[0]" class="favBtn" @click="favClick(0)"/>
@@ -21,7 +21,7 @@
         </div>
       </uni-nav-bar>
     </div>
-  </div>
+  </page>
 </template>
 
 <script>
@@ -60,22 +60,22 @@ export default {
   }
 
   div {
-    font-size: 28px;
+    font-size: 14px;
     line-height: inherit
   }
 
   .example {
-    padding: 0 30px 30px
+    padding: 0 15px 15px
   }
 
   .example-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 32px;
+    font-size: 16px;
     color: #464e52;
-    padding: 30px 30px 30px 50px;
-    margin-top: 20px;
+    padding: 15px 15px 15px 25px;
+    margin-top: 10px;
     position: relative;
     background-color: #fdfdfd;
     border-bottom: 1px #f5f5f5 solid
@@ -89,34 +89,34 @@ export default {
   .example-title:after {
     content: '';
     position: absolute;
-    left: 30px;
+    left: 15px;
     margin: auto;
     top: 0;
     bottom: 0;
-    width: 6px;
-    height: 32px;
+    width: 3px;
+    height: 16px;
     background-color: #ccc
   }
 
   .example .example-title {
-    margin: 40px 0
+    margin: 20px 0
   }
 
   .example-body {
     display: flex;
     justify-content: space-between;
-    padding: 30px;
+    padding: 15px;
     background: #fff
   }
 
   .example-info {
-    padding: 30px;
+    padding: 15px;
     color: #3b4144;
     background: #fff
   }
 
   .favBtn {
-    margin: 0 20px 20px 0;
+    margin: 0 10px 10px 0;
   }
 
   .favBtn-nav {
@@ -124,6 +124,6 @@ export default {
   }
 
   .example-body-fullWidth {
-    padding: 32px 0;
+    padding: 16px 0;
   }
 </style>

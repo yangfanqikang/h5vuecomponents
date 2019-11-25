@@ -75,32 +75,32 @@ export default {
 
   .uni-fav {
     display: flex;
-    width: 120px;
-    height: 50px;
-    line-height: 50px;
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
     text-align: center;
-    font-size: 28px;
+    font-size: 14px;
     box-sizing: border-box;
-    border-radius: 6px;
+    border-radius: 3px;
     align-items: center;
     justify-content: center;
   }
 
   .uni-fav--circle {
-    border-radius: 60px
+    border-radius: 30px
   }
 
   .uni-fav-star {
-    height: 50px;
-    line-height: 50px;
-    margin-right: 5px;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 2px;
     vertical-align: middle
   }
 
   .uni-fav-text {
     display: inline-block;
-    height: 50px;
-    line-height: 50px;
+    height: 25px;
+    line-height: 25px;
     vertical-align: middle
   }
 </style>

@@ -10,7 +10,7 @@
     <div>
       <div class="example-title">左侧滑出</div>
       <div class="example-body">
-        <button type="default" @click="show('left')">显示Drawer</button>
+        <van-button plain type="primary" @click="show('left')">显示Drawer</van-button>
         <uni-drawer :visible="showLeft" mode="left" @close="closeDrawer('left')">
           <!-- #ifndef MP-BAIDU || MP-ALIPAY || MP-TOUTIAO -->
           <uni-list>
@@ -27,13 +27,13 @@
           </div>
           <!-- #endif -->
           <div class="close">
-            <button type="default" @click="hide">关闭Drawer</button>
+            <van-button plain type="warning" @click="hide">关闭Drawer</van-button>
           </div>
         </uni-drawer>
       </div>
       <div class="example-title">右侧滑出</div>
       <div class="example-body">
-        <button type="default" @click="show('right')">显示Drawer</button>
+        <van-button plain type="primary" @click="show('right')">显示Drawer</van-button>
         <uni-drawer :visible="showRigth" mode="right" @close="closeDrawer('right')">
           <!-- #ifndef MP-BAIDU || MP-ALIPAY || MP-TOUTIAO -->
           <uni-list>
@@ -50,7 +50,7 @@
           </div>
           <!-- #endif -->
           <div class="close">
-            <button type="default" @click="hide">关闭Drawer</button>
+            <van-button plain type="warning" @click="hide">关闭Drawer</van-button>
           </div>
         </uni-drawer>
       </div>

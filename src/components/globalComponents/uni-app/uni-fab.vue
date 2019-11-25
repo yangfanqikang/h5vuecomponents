@@ -82,10 +82,10 @@ export default {
   },
   computed: {
     contentWidth (e) {
-      return ((this.content.length + 1) * 110 + 20) / 2 + 'px'
+      return ((this.content.length + 1) * 110 + 20) + 'px'
     },
     contentWidthMin () {
-      return 55 + 'px'
+      return 110 + 'px'
     },
     // 动态计算宽度
     boxWidth () {
@@ -184,7 +184,7 @@ export default {
 
   .uni-icon {
     font-family: uniicons;
-    font-size: 24px;
+    font-size: 12px;
     font-weight: normal;
     font-style: normal;
     line-height: 1;
@@ -206,13 +206,13 @@ export default {
   }
 
   .fab-box.top {
-    width: 60px;
-    height: 60px;
-    right: 30px;
-    bottom: 60px;
+    width: 20px;
+    height: 30px;
+    right: 15px;
+    bottom: 30px;
     border: 1px #5989b9 solid;
     background: #6699cc;
-    border-radius: 10px;
+    border-radius: 5px;
     color: #fff;
     transition: all 0.3;
     opacity: 0;
@@ -227,28 +227,28 @@ export default {
   }
 
   .fab-box.fab.leftBottom {
-    left: 30px;
-    bottom: 60px;
+    left: 15px;
+    bottom: 30px;
   }
 
   .fab-box.fab.leftTop {
-    left: 30px;
-    top: 80px;
+    left: 15px;
+    top: 40px;
     /* #ifdef H5 */
-    top: calc(80px + var(--window-top));
+    top: calc(40px + var(--window-top));
     /* #endif */
   }
 
   .fab-box.fab.rightBottom {
-    right: 30px;
-    bottom: 60px;
+    right: 15px;
+    bottom: 30px;
   }
 
   .fab-box.fab.rightTop {
-    right: 30px;
-    top: 80px;
+    right: 15px;
+    top: 40px;
     /* #ifdef H5 */
-    top: calc(80px + var(--window-top));
+    top: calc(40px + var(--window-top));
     /* #endif */
   }
 
@@ -257,12 +257,12 @@ export default {
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 110px;
-    height: 110px;
+    width: 55px;
+    height: 55px;
     background: #3c3e49;
     /* background: #5989b9; */
     border-radius: 50%;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
     z-index: 11;
   }
 
@@ -284,25 +284,25 @@ export default {
 
   .fab-circle .uni-icon-plusempty {
     color: #ffffff;
-    font-size: 80px;
+    font-size: 40px;
     transition: all 0.3s;
     font-weight: bold;
   }
 
   .fab-circle .uni-icon-plusempty.active {
     transform: rotate(135deg);
-    font-size: 80px;
+    font-size: 40px;
   }
 
   .fab-content {
     background: #6699cc;
     box-sizing: border-box;
     display: flex;
-    border-radius: 100px;
+    border-radius: 50px;
     overflow: hidden;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
     transition: all 0.2s;
-    width: 110px;
+    width: 55px;
   }
 
   .fab-content.left {
@@ -333,9 +333,9 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 110px;
-    height: 110px;
-    font-size: 24px;
+    width: 55px;
+    height: 55px;
+    font-size: 12px;
     color: #fff;
     opacity: 0;
     transition: opacity 0.2s;
@@ -346,12 +346,12 @@ export default {
   }
 
   .fab-content .fab-item .content-image {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 5px;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 2px;
   }
 
   .fab-content .fab-item.first {
-    width: 110px;
+    width: 55px;
   }
 </style>
