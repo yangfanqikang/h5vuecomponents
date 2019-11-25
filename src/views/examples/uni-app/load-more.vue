@@ -30,6 +30,14 @@
         </van-cell>
       </van-cell-group>
     </van-radio-group>
+    <label>
+      <radio class="radio" v-model="val" value="4"></radio>
+      <span>猪</span>
+    </label>
+    <label>
+      <radio class="radio" v-model="val" value="5"></radio>
+      <span>狗</span>
+    </label>
 <!--    <radio-group class="uni-list" @change="onChange">-->
 <!--      <label v-for="(item, index) in statusTypes" :key="index" class="uni-list-item">-->
 <!--        <div class="uni-list-item__container">-->
@@ -50,6 +58,7 @@ export default {
   data () {
     return {
       radio: '1',
+      val: '',
       status: 'more',
       statusTypes: [{
         value: 'more',
