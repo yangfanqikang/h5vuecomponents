@@ -1,0 +1,222 @@
+// ---- color ----
+$primary-color: #fe6701 !default;
+
+// ---- 京东灰度值gray ----
+$jd-darker-1: #252525 !default; //用于重要性文字信息,内页标题:如导航名称,大板块标题,类目名称
+$jd-darker-2: #686868 !default; //用户普通级段落信息,引导词:如商品详情段落标题信息
+$jd-darker-3: #848689 !default; //用于辅助次要的文字信息:如好评人数,商品评论
+$jd-darker-4: #bfbfbf !default; //用于下划线,页面中辅助性功能图标以及输入框内默认字体颜色
+$jd-darker-5: #d7d7d7 !default; //用于分割线,标签描边,普通按钮描边
+$jd-darker-6: #f8f8f8 !default; //用于分割模块底色
+$jd-darker-7: #fff !default; //白色
+
+$fs-1: 36px; //一般用于按钮:如页面底部的确认等
+$fs-2: 32px; //用于引导性的地方:如导航名称
+$fs-3: 28px; //用于大多数文字:适合大段文字,如商品详情等
+$fs-4: 26px; //用于大多数文字:如小标题,模块描述
+$fs-5: 24px; //用于辅助性文字:如次要副标题
+$fs-6: 22px; //用于辅助性文字:如次要备注性信息
+$fs-7: 20px; //用于辅助性文字:如次要备注性信息,小范围使用
+
+/*单条border样式*/
+@mixin border-1px ($color, $direction) {
+  content: '';
+  position: absolute;
+  background: $color;
+  @if $direction == left {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    transform: scaleX(0.5);
+    transform-origin: left 0;
+  }
+  @if $direction == right {
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    transform: scaleX(0.5);
+    transform-origin: right 0;
+  }
+  @if $direction == bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleY(0.5);
+    transform-origin: 0 bottom;
+  }
+  @if $direction == top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleY(0.5);
+    transform-origin: 0 top;
+  }
+}
+
+/*四条border样式*/
+@mixin all-border-1px ($color, $radius) {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid $color;
+  border-radius: $radius * 2;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+}
+
+// ---- 匹配渐变色 ----
+$lg-list1: rgb(252,108,126), rgb(243,84,78);
+$lg-list2:  rgb(253,189,43), rgb(252,127,35);
+$lg-list3: rgb(253,135,59),  rgb(251,92,38);
+$normal-color: #848484 !default;
+$link-color: $primary-color !default;
+$link-hover-color: mix($link-color, #000, 80%) !default;
+$title-color: #2D2D2D !default;
+$text-color: #848484 !default;
+$light-color: #F6F6F6 !default;
+$dark-color: #DADADA !default;
+// ---- 中国传统色彩 ----
+$yinbai: #e9e7ef;
+$qianbai: #f0f0f4;
+$shuangse: #e9f1f6;
+$xuebai: #f0fcff;
+$yingbai: #e3f9fd;
+$xiangyabai: #fffbf0;
+$gaosu: #f2ecde;
+$yudubai: #fcefe8;
+$baifen: #fff2df;
+$tubai: #f3f9f1;
+$su: #e0f0e9;
+// ---- 白色 ----
+$whiteList: $yinbai, $qianbai, $shuangse, $xuebai, $yingbai, $xiangyabai, $gaosu, $yudubai, $baifen, $tubai, $su;
+
+$yingcaohua: #eaff56;
+$ehuang: #fff143;
+$yahuang: #faff72;
+$xinghuang: #ffa631;
+
+$songhuase: #bce672;
+$liuhuang: #c9dd22;
+
+$nenlv: #bddd22;
+$liulv: #afdd22;
+
+$zhusha: #ff461f;
+$huohong: #ff2d51;
+$pinhong: #f00056;
+$yanghong: #ff4777;
+
+$weilan: #70f3ff;
+$lan: #44cef6;
+$bilan: #3eede7;
+$shiqing: #1685a9;
+
+// ---- 渐变 ----
+// $gradientList: ;
+@function gradient-name($deg, $start-color, $start-position, $end-color, $end-position) {
+  @return linear-gradient($deg, $start-color $start-position, $end-color $end-position);
+}
+// ---- 布局 ----
+@mixin flexCenter($display: flex, $justify-content: center, $align-items: center){
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+// ---- base ----
+$body-background: #F6F6F6 !default;
+$mask-bg: rgba(0, 0, 0, 0.5) !default;
+$font-family: PingHei,
+"Lucida Grande",
+"Lucida Sans Unicode",
+STHeiti,
+Helvetica,
+Arial,
+Verdana,
+"sans-serif",
+"PingHei-light",
+SimHei,
+"Droid Sans" !default;
+$font-size-base: 14px !default;
+$font-size-small: 12px !default;
+$font-size-large: 16px !default;
+$line-height-base: 1.5 !default;
+$border-radius-base: 8px !default;
+$border-radius-small: 3px !default;
+$border-radius-large: 50px !default;
+// ---- Animation ----
+$animation-duration: .25s !default;
+$transition-duration: .2s !default;
+$transition-duration-fast: .2s !default;
+$transition-duration-slow: .4s !default;
+$animation-timing-fun: cubic-bezier(0.55, 0.085, 0.68, 0.53) !default;
+$ease-in-out: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$ease-out: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+// ---- Border color ----
+$border-color-base: $dark-color !default;
+$border-color-dark: #ABABAB !default;
+$border-width-base: 1px !default;
+$border-style-base: solid !default;
+$border-color-active: $primary-color !default;
+// ---- Disabled ----
+$disabled-color: #F6F6F6 !default;
+$disabled-bg: #DADADA !default;
+$disabled-primary-bg: #eb8a7e !default;
+// ---- Shadow ----
+$shadow-color: rgba(0, 0, 0, .15) !default;
+$shadow-up: 0 -2px 8px $shadow-color !default;
+$shadow-down: 0 2px 8px $shadow-color !default;
+$shadow-left: -2px 0 8px $shadow-color !default;
+$shadow-right: 2px 0 8px $shadow-color !default;
+$shadow-base: $shadow-down !default;
+// ---- Buttons ----
+$btn-font-weight: normal !default;
+$btn-border-radius-base: 8px !default;
+$btn-border-radius-small: 3px !default;
+$btn-border-radius-large: 50px !default;
+$btn-height-small: 30px !default;
+$btn-height-big: 40px !default;
+$btn-icon-height-small: 12px !default;
+$btn-icon-height-big: 16px !default;
+$btn-menu-icon-height: 20px !default;
+$btn-menu-height: 50px !default;
+$btn-primary-color: #FFF !default;
+$btn-primary-bg: $primary-color !default;
+$btn-gradient-color: #FFF !default;
+$btn-gradient-start-color: #ff4f18;
+$btn-gradient-end-color: #f20000;
+$btn-gradient-bg: linear-gradient(315deg, $btn-gradient-start-color 0%, $btn-gradient-end-color 100%) !default;
+$btn-gradient-active-bg: linear-gradient(315deg, darken($btn-gradient-start-color, 10%) 0%, darken($btn-gradient-end-color, 10%) 100%) !default;
+$btn-default-color: $normal-color !default;
+$btn-default-bg: #FFF !default;
+$btn-default-border: $border-color-dark !default;
+$btn-active-color: #FFF !default;
+$btn-active-bg: $primary-color !default;
+$btn-active-border: 􏰅􏴦􏵘􏵑􏱱􏵘􏴦$primary-color !default;
+$btn-disable-color: $disabled-color !default;
+$btn-disable-bg: $disabled-bg !default;
+$btn-disable-border: $disabled-color !default;
+$btn-icon-margin: 5px;
+$btn-label-light-bg: rgba(240, 37, 15, .05);
+// ---- z-index ----
+$zindex-mask: 9998 !default;
+$zindex-actionsheet: 10001 !default;
+$zindex-dialog: 10000 !default;
+$zindex-picker: 10050 !default;
+// ---- Assets path ----
+$assetsPath:'../../assets' !default;
+// ---- Stepper ----
+$stepper-color: #333 !default;
+$stepperbar-width: 11px !default;
+$stepperbar-color: #333 !default;
+// ---- coolhue ----
