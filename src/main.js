@@ -12,6 +12,8 @@ import { Lazyload, NavBar, Icon, Button, RadioGroup, Radio, Cell, CellGroup, Toa
 import defaultSettings from '@/settings'
 // import GlobalComponents from './components/index'
 import './components/index'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/swiper.scss'
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api
@@ -27,6 +29,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // options 为可选参数，无则不传
 Vue.use(Lazyload).use(NavBar).use(Icon).use(Button).use(RadioGroup).use(Radio).use(Cell).use(CellGroup).use(Toast)
+Vue.use(VueAwesomeSwiper)
 // Vue.use(GlobalComponents)
 Vue.component('svg-icon', SvgIcon)
 if (process.env.NODE_ENV === 'development' && defaultSettings.vconsole) {

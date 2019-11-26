@@ -190,7 +190,7 @@ module.exports = {
     modules: false,
     loaderOptions: {
       sass: {
-        data: '@import "style/_mixin.scss";@import "style/_variables.scss";@import "style/common.scss";@import "style/coolhue.scss";' // 全局引入
+        data: '@import "style/_mixin.scss";@import "style/_variables.scss";@import "style/common.scss";@import "style/coolhue.scss";@import "style/uni.scss";' // 全局引入
       }
     }
   }
