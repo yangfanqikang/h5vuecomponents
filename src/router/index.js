@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from 'views/Home.vue'
 import store from '@/store'
 import pages from '@/views/examples/uni-app/index'
+import nutPages from '@/views/examples/nut/index'
 console.log(pages)
 Vue.use(Router)
 
@@ -25,7 +26,8 @@ let routes = [
       keepAlive: true
     }
   },
-  ...pages
+  ...pages,
+  ...nutPages
 ]
 
 const routerContext = require.context('./', true, /\.js$/)

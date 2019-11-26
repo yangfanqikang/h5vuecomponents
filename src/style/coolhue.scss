@@ -79,6 +79,9 @@ $fs-7: 20px; //用于辅助性文字:如次要备注性信息,小范围使用
 $lg-list1: rgb(252,108,126), rgb(243,84,78);
 $lg-list2:  rgb(253,189,43), rgb(252,127,35);
 $lg-list3: rgb(253,135,59),  rgb(251,92,38);
+$lg-list4: #93D812,  #1ECB92;
+$lg-list5: #72CFFD,  #2FB1F5;
+$lg-list6: #5E9DF8,  #5E9DF8;
 $normal-color: #848484 !default;
 $link-color: $primary-color !default;
 $link-hover-color: mix($link-color, #000, 80%) !default;
@@ -128,10 +131,11 @@ $shiqing: #1685a9;
   @return linear-gradient($deg, $start-color $start-position, $end-color $end-position);
 }
 // ---- 布局 ----
-@mixin flexCenter($display: flex, $justify-content: center, $align-items: center){
+@mixin flexCenter($display: flex, $justify-content: center, $align-items: center, $flex-wrap: nowrap){
   display: $display;
   justify-content: $justify-content;
   align-items: $align-items;
+  flex-wrap: $flex-wrap;
 }
 // ---- base ----
 $body-background: #F6F6F6 !default;

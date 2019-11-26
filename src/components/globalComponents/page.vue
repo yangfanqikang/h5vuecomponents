@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <header-nav :title="title"/>
     <slot></slot>
   </div>
@@ -15,5 +15,7 @@ export default {
 </script>
 
 <style scoped>
-
+.page{
+  background-color: #f6f6f6;
+}
 </style>

@@ -27,7 +27,18 @@
               <div v-show="currentIndex2 === 0"></div>
             </div>
         </div>
-        <div v-show="currentIndex === 1"></div>
+        <div v-show="currentIndex === 1" class="page-nut">
+            <div class="page-nut-header">
+              <div v-for="(item2, index2) in ['数据展示', '数据录入', '操作反馈', '导航组件', '布局组件', '基础组件']" :key="item2" @click="clickUniHeader(index2)">{{item2}}</div>
+            </div>
+            <div class="page-nut-content">
+              <div v-show="currentIndex2 === 0">
+                <div class="page-nut-li" v-for="(li, indexli) in nutList" :key="indexli" @click="clickUniUrl(li)">{{li.name}}</div>
+              </div>
+              <div v-show="currentIndex2 === 0"></div>
+              <div v-show="currentIndex2 === 0"></div>
+            </div>
+        </div>
         <div v-show="currentIndex === 2"></div>
         <div v-show="currentIndex === 3"></div>
         <div v-show="currentIndex === 4"></div>
@@ -37,7 +48,8 @@
 </template>
 
 <script>
-
+import uniList from './uniList'
+import nutList from './nut/index'
 export default {
   name: 'index',
   data () {
@@ -46,111 +58,8 @@ export default {
       currentIndex2: 0,
       pageHeaderList: ['uni', 'nut', 'mand', 'cube', 'vant'],
       uniHeaderList: ['扩展组件', '模板', '内置组件'],
-      lists: [{
-        name: 'Badge 数字角标',
-        url: 'badge'
-      },
-      {
-        name: 'Calendar 日历',
-        url: 'calendar'
-      },
-      {
-        name: 'Card 卡片',
-        url: 'card'
-      },
-      {
-        name: 'Collapse 折叠面板',
-        url: 'collapse'
-      },
-      {
-        name: 'CountDown 倒计时',
-        url: 'count-down'
-      },
-      {
-        name: 'Drawer 抽屉',
-        url: 'drawer'
-      },
-      {
-        name: 'Fab 悬浮按钮',
-        url: 'fab'
-      },
-      {
-        name: 'Fav 收藏按钮',
-        url: 'fav'
-      },
-      {
-        name: 'GoodsNav 商品导航',
-        url: 'goods-nav'
-      },
-      {
-        name: 'Grid 宫格',
-        url: 'grid'
-      },
-      {
-        name: 'Icons 图标',
-        url: 'icons'
-      },
-      {
-        name: 'IndexedList 索引列表',
-        url: 'indexed-list'
-      },
-      {
-        name: 'List 列表',
-        url: 'uni-list'
-      },
-      {
-        name: 'LoadMore 加载更多',
-        url: 'load-more'
-      },
-      {
-        name: 'NavBar 自定义导航栏',
-        url: 'nav-bar'
-      },
-      {
-        name: 'NoticeBar 通告栏',
-        url: 'notice-bar'
-      },
-      {
-        name: 'NumberBox 数字输入框',
-        url: 'number-box'
-      },
-      {
-        name: 'Pagination 分页器',
-        url: 'pagination'
-      },
-      {
-        name: 'PopUp 弹出层',
-        url: 'popup'
-      },
-      {
-        name: 'Rate 评分',
-        url: 'rate'
-      },
-      {
-        name: 'SearchBar 搜索栏',
-        url: 'search-bar'
-      },
-      {
-        name: 'SegmentedControl 分段器',
-        url: 'segmented-control'
-      },
-      {
-        name: 'Steps 步骤条',
-        url: 'steps'
-      },
-      {
-        name: 'SwipeAction 滑动操作',
-        url: 'swipe-action'
-      },
-      {
-        name: 'SwiperDot 轮播图指示点',
-        url: 'swiper-dot'
-      },
-      {
-        name: 'Tag 标签',
-        url: 'tag'
-      }
-      ]
+      lists: uniList,
+      nutList: nutList
     }
   },
   methods: {
@@ -240,6 +149,61 @@ export default {
             >div{
               padding-top: 15px;
               >.page-uni-li{
+                font-size: $fs-3 / 2;
+                line-height: 50px;
+                height: 50px;
+                box-sizing: border-box;
+                position: relative;
+                &::after{
+                  position: absolute;
+                  content: '';
+                  background-color: $jd-darker-5;
+                  display: block;
+                  width: 100%;
+                  height: 1px; /*no*/
+                  transform: scale(1, 0.5);
+                  bottom: 0;
+                  left: 0;
+                }
+              }
+            }
+          }
+        }
+        .page-nut{
+          >.page-nut-header{
+            @include flexCenter($justify-content: space-between, $flex-wrap: wrap);
+            padding-top: 15px;
+            >div{
+              width: 90px;
+              height: 90px;
+              line-height: 90px;
+              text-align: center;
+              color: #fff;
+              border-radius: 50%;
+              font-size: 16px;
+              margin-bottom: 25px;
+              background: gradient-name(135deg, nth($lg-list1, 1), 0, nth($lg-list1, 2), 100%);
+            }
+            >div:nth-child(2){
+              background: gradient-name(135deg, nth($lg-list2, 1), 0, nth($lg-list2, 2), 100%);
+            }
+            >div:nth-child(3){
+              background: gradient-name(135deg, nth($lg-list3, 1), 0, nth($lg-list3, 2), 100%);
+            }
+            >div:nth-child(4){
+              background: gradient-name(135deg, nth($lg-list4, 1), 0, nth($lg-list4, 2), 100%);
+            }
+            >div:nth-child(5){
+              background: gradient-name(135deg, nth($lg-list5, 1), 0, nth($lg-list5, 2), 100%);
+            }
+            >div:nth-child(6){
+              background: gradient-name(135deg, nth($lg-list6, 1), 0, nth($lg-list6, 2), 100%);
+            }
+          }
+          >.page-nut-content{
+            >div{
+              padding-top: 15px;
+              >.page-nut-li{
                 font-size: $fs-3 / 2;
                 line-height: 50px;
                 height: 50px;
