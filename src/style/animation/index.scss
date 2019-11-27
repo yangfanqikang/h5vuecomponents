@@ -1,8 +1,18 @@
 // Animation
+@import 'fade.scss';
+@import 'zoom.scss';
+@import 'slide.scss';
+@import 'drop.scss';
+@import 'bounce.scss';
+@import "drop";
+@import "ease";
+@import "pulse";
+@import "rotate";
 %common-animation{
-    animation-duration: $animationDuration;
+    //animation-duration: $animationDuration;
+    animation-duration: 2s;
     animation-fill-mode: both;
-    animation-timing-function: $animationTimingFun;
+    animation-timing-function: ease;
    
 }
 
@@ -27,9 +37,3 @@
         animation-name: #{$keyframeName}Out;
     }
 }
-
-@import 'fade.scss';
-@import 'zoom.scss';
-@import 'slide.scss';
-@import 'drop.scss';
-@import 'bounce.scss';  

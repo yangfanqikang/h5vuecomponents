@@ -4,6 +4,7 @@ import App from './App.vue'
 import router from '@/router'
 import store from '@/store'
 import 'utils/permission'
+import mixin from './mixins/mixin'
 import SvgIcon from 'components/SvgIcon'
 import '@/icons' // icon
 import '@/style/common.scss'
@@ -32,6 +33,7 @@ Vue.use(Lazyload).use(NavBar).use(Icon).use(Button).use(RadioGroup).use(Radio).u
 Vue.use(VueAwesomeSwiper)
 // Vue.use(GlobalComponents)
 Vue.component('svg-icon', SvgIcon)
+Vue.mixin(mixin)
 if (process.env.NODE_ENV === 'development' && defaultSettings.vconsole) {
   const VConsole = require('vconsole')
   // eslint-disable-next-line
