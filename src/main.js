@@ -6,9 +6,11 @@ import store from '@/store'
 import 'utils/permission'
 import mixin from './mixins/mixin'
 import SvgIcon from 'components/SvgIcon'
+import createDemoModule from '@/utils/mand/create-demo-module'
 import '@/icons' // icon
 import '@/style/common.scss'
 import '@/assets/font/font1/iconfont.css'
+import '@/style/mand/mand-mobile-example.css'
 import { Lazyload, NavBar, Icon, Button, RadioGroup, Radio, Cell, CellGroup, Toast, PullRefresh, List, Popup, Picker } from 'vant'
 import defaultSettings from '@/settings'
 // import GlobalComponents from './components/index'
@@ -33,6 +35,7 @@ Vue.use(Lazyload).use(NavBar).use(Icon).use(Button).use(RadioGroup).use(Radio).u
 Vue.use(VueAwesomeSwiper)
 // Vue.use(GlobalComponents)
 Vue.component('svg-icon', SvgIcon)
+Vue.prototype.createDemoModule = createDemoModule
 Vue.mixin(mixin)
 if (process.env.NODE_ENV === 'development' && defaultSettings.vconsole) {
   const VConsole = require('vconsole')

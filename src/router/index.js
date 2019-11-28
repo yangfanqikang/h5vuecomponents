@@ -6,7 +6,7 @@ import store from '@/store'
 import pages from '@/views/examples/uni-app/index'
 import nutPages from '@/views/examples/nut/index'
 import cubePages from '@/views/examples/cube/index'
-// console.log(pages)
+import mandPages from '@/views/examples/mand/index'
 Vue.use(Router)
 
 let routes = [
@@ -43,7 +43,8 @@ let routes = [
   },
   ...pages,
   ...nutPages,
-  ...cubePages
+  ...cubePages,
+  ...mandPages
 ]
 
 const routerContext = require.context('./', true, /\.js$/)

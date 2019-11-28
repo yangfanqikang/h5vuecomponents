@@ -15,6 +15,7 @@
         </div>
       </div>
       <div class="page-content">
+<!--        uni-app -->
         <div v-show="currentIndex === 0" class="page-uni">
             <div class="page-uni-header">
              <div v-for="(item2, index2) in uniHeaderList" :key="item2" @click="clickUniHeader(index2)">{{item2}}</div>
@@ -27,6 +28,7 @@
               <div v-show="currentIndex2 === 0"></div>
             </div>
         </div>
+<!--        nut ui-->
         <div v-show="currentIndex === 1" class="page-nut">
             <div class="page-nut-header">
               <div v-for="(item2, index2) in ['数据展示', '数据录入', '操作反馈', '导航组件', '布局组件', '基础组件']" :key="item2" @click="clickUniHeader(index2)">{{item2}}</div>
@@ -37,11 +39,21 @@
               </div>
             </div>
         </div>
-        <div v-show="currentIndex === 2">
-        </div>
-        <div v-show="currentIndex === 3">
+<!--        mand ui-->
+        <div v-show="currentIndex === 2" class="page-nut">
           <div class="page-nut-header">
-            <div v-for="(item2, index2) in ['数据展示', '数据录入', '操作反馈', '导航组件', '布局组件', '基础组件']" :key="item2" @click="clickUniHeader(index2)">{{item2}}</div>
+            <div v-for="(item2, index2) in ['数据展示', '数据录入', '操作反馈', '导航组件']" :key="item2" @click="clickUniHeader(index2)">{{item2}}</div>
+          </div>
+          <div class="page-nut-content">
+            <div v-show="currentIndex2 === 0">
+              <div class="page-nut-li" v-for="(li, indexli) in mandList" :key="indexli" @click="clickUniUrl(li)">{{li.name}}</div>
+            </div>
+          </div>
+        </div>
+<!--        cube ui-->
+        <div v-show="currentIndex === 3" class="page-nut">
+          <div class="page-nut-header">
+            <div v-for="(item2, index2) in ['数据展示', '数据录入', '操作反馈', '导航组件']" :key="item2" @click="clickUniHeader(index2)">{{item2}}</div>
           </div>
           <div class="page-nut-content">
             <div v-show="currentIndex2 === 0">
@@ -49,6 +61,7 @@
             </div>
           </div>
         </div>
+<!--        vant ui-->
         <div v-show="currentIndex === 4"></div>
       </div>
     </div>
@@ -59,6 +72,7 @@
 import uniList from './uniList'
 import nutList from './nut/index'
 import cubeList from './cube/index'
+import mandList from './mand/index'
 export default {
   name: 'index',
   data () {
@@ -69,7 +83,8 @@ export default {
       uniHeaderList: ['扩展组件', '模板', '内置组件'],
       lists: uniList,
       nutList,
-      cubeList
+      cubeList,
+      mandList
     }
   },
   methods: {
