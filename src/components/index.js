@@ -21,7 +21,7 @@ uniComponents.keys().forEach(fileName => {
     )
   )
   // const componentName = componentConfig.default.name || componentConfig.name
-  console.log(componentName)
+  // console.log(componentName)
   // 全局注册组件
   Vue.component(
     componentName,

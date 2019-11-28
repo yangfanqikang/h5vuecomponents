@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from 'views/Home.vue'
+import hotelTravelFarm from '../views/hotelTravelFarm'
 import store from '@/store'
 import pages from '@/views/examples/uni-app/index'
 import nutPages from '@/views/examples/nut/index'
-console.log(pages)
+import cubePages from '@/views/examples/cube/index'
+// console.log(pages)
 Vue.use(Router)
 
 let routes = [
@@ -18,6 +20,19 @@ let routes = [
     }
   },
   {
+    path: '/htf',
+    name: 'htf',
+    component: hotelTravelFarm,
+    meta: {
+      title: '酒店旅馆农家乐',
+      keepAlive: true
+    },
+    props: {
+      title: 'hotel',
+      'geo': '640400'
+    }
+  },
+  {
     path: '/404',
     name: '404',
     component: () => import(/* webpackChunkName: "404" */ 'views/404.vue'),
@@ -27,12 +42,13 @@ let routes = [
     }
   },
   ...pages,
-  ...nutPages
+  ...nutPages,
+  ...cubePages
 ]
 
 const routerContext = require.context('./', true, /\.js$/)
-console.log(routerContext.keys())
-console.log(routerContext('./article.js'))
+// console.log(routerContext.keys())
+// console.log(routerContext('./article.js'))
 routerContext.keys().forEach(route => {
   // 如果是根目录的 index.js 、不处理
   if (route.startsWith('./index')) {

@@ -28,6 +28,9 @@
       <van-button type="warning" @click="logout">退出登录</van-button>
       <router-link to="/404"><svg-icon icon-class="404"/>前往404页面</router-link>
     </div>
+    <div>
+      <router-link to="/htf">酒店宾馆农家乐</router-link>
+    </div>
     <footer-tabbar/>
   </div>
 </template>
@@ -37,7 +40,6 @@ import { Button, Tabbar, TabbarItem, Swipe, SwipeItem } from 'vant'
 import { mapActions, mapMutations, mapState } from 'vuex' // createNamespacedHelpers
 import FooterTabbar from 'components/FooterTabbar'
 // const { mapActions } = createNamespacedHelpers('test') // 可使用这种方式直接获得test模板
-
 export default {
   name: 'home',
   data () {

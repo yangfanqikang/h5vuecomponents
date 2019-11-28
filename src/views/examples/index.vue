@@ -35,12 +35,20 @@
               <div v-show="currentIndex2 === 0">
                 <div class="page-nut-li" v-for="(li, indexli) in nutList" :key="indexli" @click="clickUniUrl(li)">{{li.name}}</div>
               </div>
-              <div v-show="currentIndex2 === 0"></div>
-              <div v-show="currentIndex2 === 0"></div>
             </div>
         </div>
-        <div v-show="currentIndex === 2"></div>
-        <div v-show="currentIndex === 3"></div>
+        <div v-show="currentIndex === 2">
+        </div>
+        <div v-show="currentIndex === 3">
+          <div class="page-nut-header">
+            <div v-for="(item2, index2) in ['数据展示', '数据录入', '操作反馈', '导航组件', '布局组件', '基础组件']" :key="item2" @click="clickUniHeader(index2)">{{item2}}</div>
+          </div>
+          <div class="page-nut-content">
+            <div v-show="currentIndex2 === 0">
+              <div class="page-nut-li" v-for="(li, indexli) in cubeList" :key="indexli" @click="clickUniUrl(li)">{{li.name}}</div>
+            </div>
+          </div>
+        </div>
         <div v-show="currentIndex === 4"></div>
       </div>
     </div>
@@ -50,6 +58,7 @@
 <script>
 import uniList from './uniList'
 import nutList from './nut/index'
+import cubeList from './cube/index'
 export default {
   name: 'index',
   data () {
@@ -59,7 +68,8 @@ export default {
       pageHeaderList: ['uni', 'nut', 'mand', 'cube', 'vant'],
       uniHeaderList: ['扩展组件', '模板', '内置组件'],
       lists: uniList,
-      nutList: nutList
+      nutList,
+      cubeList
     }
   },
   methods: {
